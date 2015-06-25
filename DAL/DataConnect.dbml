@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="asp" Class="DataConnectDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=localhost;Initial Catalog=asp;Integrated Security=True" SettingsObjectName="DAL.Properties.Settings" SettingsPropertyName="aspConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.companyinfo" Member="companyinfo">
+    <Type Name="companyinfo">
+      <Column Name="userid" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="companyname" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="shortname" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="logo" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="website" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="province" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="city" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="scale" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="describe" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="director" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="varifyfile" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="tag1" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="tag2" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="tag3" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="verifystate" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.userinfo" Member="userinfo">
+    <Type Name="userinfo">
+      <Column Name="email" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="password" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="role" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="userstate" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="token" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="userid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="userregdate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

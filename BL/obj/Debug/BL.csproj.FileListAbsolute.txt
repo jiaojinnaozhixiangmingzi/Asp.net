@@ -1,0 +1,14 @@
+D:\my_vs_2012doc\Solution1\BL\bin\Debug\BL.dll
+D:\my_vs_2012doc\Solution1\BL\bin\Debug\BL.pdb
+D:\my_vs_2012doc\Solution1\BL\bin\Debug\DAL.dll
+D:\my_vs_2012doc\Solution1\BL\bin\Debug\DAL.pdb
+D:\my_vs_2012doc\Solution1\BL\obj\Debug\BL.csprojResolveAssemblyReference.cache
+D:\my_vs_2012doc\Solution1\BL\obj\Debug\BL.dll
+D:\my_vs_2012doc\Solution1\BL\obj\Debug\BL.pdb
+C:\Users\王阿星\Desktop\my_vs_2012doc\Solution1\BL\bin\Debug\BL.dll
+C:\Users\王阿星\Desktop\my_vs_2012doc\Solution1\BL\bin\Debug\BL.pdb
+C:\Users\王阿星\Desktop\my_vs_2012doc\Solution1\BL\bin\Debug\DAL.dll
+C:\Users\王阿星\Desktop\my_vs_2012doc\Solution1\BL\bin\Debug\DAL.pdb
+C:\Users\王阿星\Desktop\my_vs_2012doc\Solution1\BL\obj\Debug\BL.csprojResolveAssemblyReference.cache
+C:\Users\王阿星\Desktop\my_vs_2012doc\Solution1\BL\obj\Debug\BL.dll
+C:\Users\王阿星\Desktop\my_vs_2012doc\Solution1\BL\obj\Debug\BL.pdb
