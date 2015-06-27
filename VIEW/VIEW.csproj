@@ -127,6 +127,10 @@
     <Content Include="Account\OpenAuthProviders.ascx" />
     <Content Include="Account\Register.aspx" />
     <Content Include="Account\RegisterExternalLogin.aspx" />
+    <Content Include="ChallengeOnline1.aspx" />
+    <Content Include="ChallengeOnline2.aspx" />
+    <Content Include="ChallengeOnline3.aspx" />
+    <Content Include="ChallengeResult.aspx" />
     <Content Include="CompanyChangeInfo.aspx" />
     <Content Include="BossIndex.aspx" />
     <Content Include="boss_index.aspx" />
@@ -192,6 +196,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="head.aspx" />
     <Content Include="headforcompany.aspx" />
+    <Content Include="HistoryChallenge.aspx" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\bullet.png" />
     <Content Include="Images\heroAccent.png" />
@@ -207,7 +212,11 @@
     <Content Include="Images\orderedList9.png" />
     <Content Include="packages.config" />
     <Content Include="UserActive.aspx" />
+    <Content Include="UserChallenge.aspx" />
+    <Content Include="UserEdit.aspx" />
+    <Content Include="UserIndex.aspx" />
     <Content Include="UserLogin.aspx" />
+    <Content Include="UserResume.aspx" />
     <Content Include="ViewCompanyInfo.aspx" />
     <Content Include="WebForm1.aspx" />
     <Content Include="WebForm2.aspx" />
@@ -292,6 +301,34 @@
     <Compile Include="Account\RegisterExternalLogin.aspx.designer.cs">
       <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ChallengeOnline1.aspx.cs">
+      <DependentUpon>ChallengeOnline1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChallengeOnline1.aspx.designer.cs">
+      <DependentUpon>ChallengeOnline1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChallengeOnline2.aspx.cs">
+      <DependentUpon>ChallengeOnline2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChallengeOnline2.aspx.designer.cs">
+      <DependentUpon>ChallengeOnline2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChallengeOnline3.aspx.cs">
+      <DependentUpon>ChallengeOnline3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChallengeOnline3.aspx.designer.cs">
+      <DependentUpon>ChallengeOnline3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChallengeResult.aspx.cs">
+      <DependentUpon>ChallengeResult.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChallengeResult.aspx.designer.cs">
+      <DependentUpon>ChallengeResult.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CompanyChangeInfo.aspx.cs">
       <DependentUpon>CompanyChangeInfo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -372,6 +409,13 @@
     <Compile Include="headforcompany.aspx.designer.cs">
       <DependentUpon>headforcompany.aspx</DependentUpon>
     </Compile>
+    <Compile Include="HistoryChallenge.aspx.cs">
+      <DependentUpon>HistoryChallenge.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HistoryChallenge.aspx.designer.cs">
+      <DependentUpon>HistoryChallenge.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
@@ -387,12 +431,40 @@
     <Compile Include="UserActive.aspx.designer.cs">
       <DependentUpon>UserActive.aspx</DependentUpon>
     </Compile>
+    <Compile Include="UserChallenge.aspx.cs">
+      <DependentUpon>UserChallenge.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserChallenge.aspx.designer.cs">
+      <DependentUpon>UserChallenge.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserEdit.aspx.cs">
+      <DependentUpon>UserEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserEdit.aspx.designer.cs">
+      <DependentUpon>UserEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserIndex.aspx.cs">
+      <DependentUpon>UserIndex.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserIndex.aspx.designer.cs">
+      <DependentUpon>UserIndex.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UserLogin.aspx.cs">
       <DependentUpon>UserLogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="UserLogin.aspx.designer.cs">
       <DependentUpon>UserLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserResume.aspx.cs">
+      <DependentUpon>UserResume.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserResume.aspx.designer.cs">
+      <DependentUpon>UserResume.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewCompanyInfo.aspx.cs">
       <DependentUpon>ViewCompanyInfo.aspx</DependentUpon>
@@ -449,6 +521,10 @@
     <ProjectReference Include="..\BL\BL.csproj">
       <Project>{911d582a-1c62-4c5c-8dda-8f05a5f06f88}</Project>
       <Name>BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{0c8db82d-eec4-4240-b542-79f23ce0c5c9}</Project>
+      <Name>DAL</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
