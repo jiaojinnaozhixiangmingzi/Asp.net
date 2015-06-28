@@ -67,6 +67,8 @@ namespace VIEW
             //排序
             int sort = 0;
 
+            String keywords = TextBox1.Text;
+
             BL.ShowChallenge sc = new BL.ShowChallenge();
             rpt_Message.DataSource = sc.ShowChallenge1(jishu, xinshui, province, sort);
             rpt_Message.DataBind();

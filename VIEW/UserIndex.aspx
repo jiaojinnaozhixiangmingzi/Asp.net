@@ -16,7 +16,6 @@
 <link  rel="stylesheet"  href="./user_index_files/main.css" />
 <link  rel="stylesheet"  href="./user_index_files/woo.css" />
 <link  rel="stylesheet"  href="./user_index_files/gotop.css" />
-
 <link  rel="stylesheet"  href="./user_index_files/resize.css" />
 
 
@@ -137,7 +136,7 @@
 		<div  class="row">
 			<div  class="col-md-8 col-no-left-padding col-md-offset-2">
 				<section  class="middle">
-					<div  class="col-md-2 col-no-left-padding"  style="margin-bottom: 10px;">
+					<div  class="col-md-2 col-no-left-padding"  style="margin-bottom: 10px;width:145px">
                         <select  id="select1"  runat="server" class="form-control">
 							<option  selected=""  value="0">技术方向</option>
 							<option  value="1">Java</option>
@@ -150,7 +149,7 @@
 							
 						</select>
 					</div>
-					<div  class="col-md-2 col-no-left-padding"  style="margin-bottom: 10px;">
+					<div  class="col-md-2 col-no-left-padding"  style="margin-bottom: 10px;width:145px">
 						<select  id="select2" runat="server" class="form-control">
 							<option  selected=""  value="0">起始薪资</option>
 							<option  value="1">2k~5k</option>
@@ -161,7 +160,7 @@
 							<option  value="6">15k以上</option>
 						</select>
 					</div>
-					<div  class="col-md-2 col-no-left-padding"  style="margin-bottom: 10px;">
+					<div  class="col-md-2 col-no-left-padding"  style="margin-bottom: 10px;width:145px" >
 						<select  id="select3" runat="server"  class="form-control">
 							<option  value="0">全部地区</option>
 							<option  value="北京">北京</option>
@@ -209,13 +208,13 @@
 							<input  name="flag"  id="input-flag"  type="hidden"  value="0"/> 
 							<input  name="selectedProvince"  id="input-selected-province"  type="hidden"  value="14"/>
 							<input  name="selectedCity"  id="input-selected-city"  type="hidden"  value="1401"/> 
-							<input  name="searchCondition"  class="form-control"  placeholder="请输入关键词，如公司名称等"  value=""/> 
-						 
+							<%--<input  name="searchCondition"  class="form-control" style="width:90%"  placeholder="请输入关键词，如公司名称等"  value=""/> 
+                          --%>  <asp:TextBox ID="TextBox1" class="form-control" style="width:90%"  placeholder="请输入关键词，如公司名称等" value="" runat="server"></asp:TextBox>
                         <span  class="input-group-btn">
 
-                           
+                           <asp:Button ID="Button2" runat="server" Text="查询" OnClick="get" class="btn" style="float:right; margin-top:-36px;"/> 
+                        
 
-                         <asp:Button ID="Button2" runat="server" Text="查询" OnClick="get" class="btn"/>
                             <%-- <button  type="submit"runat="server" OnClick="get" text="查询" class="btn">
                                <i  class="fa fa-search"></i></button> --%>
                                 

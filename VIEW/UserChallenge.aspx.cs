@@ -51,5 +51,13 @@ namespace VIEW
             }
         }
 
+
+        protected void BeginChallenge(object sender, EventArgs e)
+        {
+            
+                Response.Redirect("~/ChallengeOnline1.aspx");//进入企业首页
+           
+        }
+
     }
 }

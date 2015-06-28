@@ -176,7 +176,7 @@
 									</div>
 									<div  class="panel-footer align-center">
                                         <asp:Button  id="idbutton" runat="server" Text='<%# Eval("publishid")%>' class="btn btn-new1"  visible="false"></asp:Button>
-											<asp:button runat="server" class="btn btn-new1" id="begin" Text="开始挑战"></asp:button>
+											<asp:button runat="server" class="btn btn-new1" OnClick="BeginChallenge" Text="开始挑战"></asp:button>
 											<asp:button   runat="server" id="giveup"  CommandName="giveup" class="btn btn-new2" Text="放弃" ></asp:button>
 									</div>
 								</div>
