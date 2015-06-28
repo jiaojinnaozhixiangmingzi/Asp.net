@@ -23,6 +23,34 @@ namespace VIEW
             string CompanyName = ul.GetCompanyName(userid);//得到公司的全称，显示到页面的右上角
 
             //spanname.InnerText = CompanyName;
+            SetBind();
+           
+        }
+
+        private void SetBind()
+        {
+            BL.CompanyChallengeBL cc = new BL.CompanyChallengeBL();
+            string useremail = (string)Session["useremail"];
+            BL.CompanyInfoManageBL ul = new BL.CompanyInfoManageBL(useremail);
+            int userid = ul.GetCompanyNo();
+
+            rpt_Message.DataSource = cc.GetGoingChallenge(userid);
+            rpt_Message.DataBind();
+        }
+
+        protected void Button_Click1(object sender, EventArgs e)
+        {
+            //进入创建挑战界面
+            Response.Redirect("~/CompanyAddChallenge.aspx?");
+        }
+
+        protected void rpt_Message_ItemCommand(object source, RepeaterCommandEventArgs e)
+        {
+            String str = ((Button)e.Item.FindControl("idbutton")).Text;
+            
+            string useremail = (string)Session["useremail"];
+            int publishid = int.Parse(str);
+            Response.Redirect("~/CompanyChallengeDetail.aspx?userid=" + useremail + "&publishid=" + publishid);
 
         }
        
