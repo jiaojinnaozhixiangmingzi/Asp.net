@@ -21,6 +21,16 @@ namespace BL
             //return (IQueryable<viewchallenge>)result;
             return result;
         }
+        public List<DAL.viewchallenge1> ShowAllChallenge1()
+        {
+
+            var result = sc.ShowAllChallenge1();
+
+
+            //vl=sc.ShowAllChallenge();
+            //return (IQueryable<viewchallenge>)result;
+            return result;
+        }
 
         public List<DAL.viewchallenge> ShowMyChallenge(int userid)
         {
