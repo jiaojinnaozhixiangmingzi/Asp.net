@@ -19,6 +19,7 @@ namespace DAL
         string CompanyTag1;
         string CompanyTag2;
         string CompanyTag3;
+        int CompanyVarifyState;
 
         DataConnectDataContext ddc = new DataConnectDataContext();
         public void GetCompayInfo(int userid)
@@ -40,6 +41,7 @@ namespace DAL
                 CompanyTag1 = t.tag1;
                 CompanyTag2 = t.tag2;
                 CompanyTag3 = t.tag3;
+                CompanyVarifyState = (int)t.verifystate;
             }
 
             ddc.SubmitChanges();
@@ -110,6 +112,20 @@ namespace DAL
                 t.city = CompanyCity;
                 t.scale = CompanyScale;
                 t.describe = CompanyDescribe;
+            }
+
+            ddc.SubmitChanges();
+
+        }
+        public void SaveVarifyState(int userid, int state)
+        {
+            var rusult = from t in ddc.companyinfo
+                         where t.userid == userid
+                         select t;
+            foreach (companyinfo t in rusult)
+            {
+                //  t.userid = userid;
+                t.verifystate = state;
             }
 
             ddc.SubmitChanges();
@@ -228,6 +244,14 @@ namespace DAL
         public string GetCompanyTag3()
         {
             return CompanyTag3;
+        }
+        public int GetCompanyVarifyState()
+        {
+            return CompanyVarifyState;
+        }
+        public void SetCompanyVarifyState(int state)
+        {
+            this.CompanyVarifyState = state;
         }
         public void SetCompanyTag1(string companytempt1) {
             CompanyTag1 = companytempt1;
