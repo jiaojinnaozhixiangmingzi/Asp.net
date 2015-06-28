@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CompanyIndex.aspx.cs" Inherits="VIEW.CompanyIndex" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CompanyIndex.aspx.cs" Inherits="VIEW.CompanyIndex"%>
 
 <!DOCTYPE html>
 <!-- saved from url=(0042)http://www.oxcoder.com/hr-recruit-list.htm -->
@@ -12,7 +12,7 @@
     <meta name="author" content="BootstrapStyler">
 
     <title>猿圈 挑战管理</title>
-
+    
 
     <link href="./css/bootstrap.min.css" rel="stylesheet">
 
@@ -74,7 +74,7 @@
 
 
 
-    <IFRAME name="ad" src="headforcompany.aspx" frameBorder="0" width="100%" scrolling="no" height="160"></IFRAME>
+    <IFRAME name="ad" src="head.aspx" frameBorder="0" width="100%" scrolling="no" height="100"></IFRAME>
     <script type="text/javascript">
         function validateSession() {
             var k = 2
@@ -85,14 +85,13 @@
     </script>
     <div class="container">
         <div class="row">
-
+            
             <div class="col-md-12">
                 <section>
                     <div id="content">
                         <div class="row">
-
+                            <form runat="server"  method="post" id="defaultForm">
                             <div class="col-md-9">
-
                                 <div class="container-fluid">
                                     <section>
                                         <section id="middle">
@@ -102,76 +101,66 @@
                                             <h2 class="h2-tab">
                                                 <a href="" class="off">挑战历史</a>
                                             </h2>
+                                            
                                             <!--吴垠快整-->
-                                            <a href="boss_add_chan.htm">
-                                                <button class="btn btn-new1 pull-right" style="margin-top: 20px;">新增挑战邀请</button></a>
+                                            
+                                                <asp:Button  class="btn btn-new1 pull-right" Style="margin-top: 20px;" runat="server" Text="新增挑战邀请" OnClick="Button_Click1" />
+                                            
                                         </section>
-
+                                        
+                                        
                                         <div id="Div1">
                                             <div class="row">
-
-
-
-                                                <div class="col-md-12">
-                                                    <div class="panel panel-default project ">
-                                                        <div class="panel-body">
-                                                            <div class="row">
-
-                                                                <div class="col-md-5">
-                                                                    <h2 style="margin: 12px 0 2px 0;">
-                                                                        <a href="boss_select.htm">[中级]php工程师</a>
-                                                                    </h2>
-                                                                    <div style="width: 280px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-                                                                        <small>[2015/05/20]
-																						数组去重
-																					
-																						冒泡排序php
-																					
-																						快速排序
-                                                                        </small>
-                                                                    </div>
-
-                                                                </div>
-                                                                <div class="col-md-2">
-                                                                    <ul class="list-unstyled" style="margin: 7px 0;">
-                                                                        <li><span class="badge badge-info">1</span>个新接受</li>
-                                                                        <li><span class="badge badge-danger">0</span>个新完成</li>
-                                                                    </ul>
-                                                                </div>
-                                                                <div class="col-md-2">
-                                                                    <ul class="list-unstyled" style="margin: 20px 0;">
-                                                                        <li><span class="red">0.0</span>%已合格</li>
-                                                                    </ul>
-                                                                </div>
-                                                                <div class="col-md-3">
-                                                                    <a href="boss_select.htm">
-                                                                        <button type="button" class="btn btn-new1">去筛选</button></a> <a href="boss_invite.htm">
-                                                                            <button type="button" class="btn btn-new1" style="margin: 16px 5px;">邀请</button></a>
-                                                                </div>
-
-                                                            </div>
-
-
-
-                                                        </div>
-
-                                                    </div>
-
-
-                                                </div>
-
-
+                                            
+                                                <asp:Repeater ID="rpt_Message" runat="server" OnItemCommand="rpt_Message_ItemCommand">
+                                                <ItemTemplate>
+                                                <div  class="col-md-12">
+												<div  class="panel panel-default project ">
+														<div  class="panel-body">
+															<div  class="row">																		
+																<div  class="col-md-5">
+																	<h2  style="margin: 12px 0 2px 0;">
+																		<a  href="boss_select.htm"><%# Eval("type")%>工程师</a>
+																	</h2>
+																	<div  style="width: 280px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+																		<small><%# Eval("startdate")%>
+																			   <%# Eval("challengename1")%>
+																			   <%# Eval("challengename2")%>
+                                                                               <%# Eval("challengename3")%>		
+																			</small>
+																	</div>
+																</div>
+																<div  class="col-md-2">
+																	<ul  class="list-unstyled"  style="margin: 7px 0;">
+																		<li><span  class="badge badge-info"><%# Eval("recievenumber")%></span>个新接受</li>
+																		<li><span  class="badge badge-danger"><%# Eval("finishnumber")%></span>个新完成</li>
+																	</ul>
+																</div>
+																<div  class="col-md-2">
+																	<ul  class="list-unstyled"  style="margin: 20px 0;">
+																		<li><span  class="red">0.0</span>%已合格</li>
+																	</ul>
+																</div>
+																<div  class="col-md-3">
+                                                                    <asp:LinkButton  id="button1" runat="server" class="btn btn-new1" >去筛选</asp:LinkButton>
+																	<button  type="button"  class="btn btn-new1"  style="margin: 16px 5px;">邀请</button>
+                                                                    <asp:Button  id="idbutton" runat="server" Text='<%# Eval("publishid")%>' class="btn btn-new1"  visible="false"></asp:Button>
+                                                                    
+																</div>																		
+															</div>																
+														</div>																
+													</div>														
+												</div>
+                                                </ItemTemplate>
+                                                </asp:Repeater>
+                                                
                                             </div>
-
                                         </div>
-
-
+                                        
                                     </section>
-
                                 </div>
-
                             </div>
-
+                            </form>
 
 
                             <div class="col-md-3 profile-info">
@@ -262,7 +251,7 @@
 
                 </section>
             </div>
-
+            
 
         </div>
 
