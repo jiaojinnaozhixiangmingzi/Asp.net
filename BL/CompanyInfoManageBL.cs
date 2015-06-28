@@ -26,6 +26,7 @@ namespace BL
         string CompanyTempt2;
         string CompanyTempt3;
         string CiPayment;
+        string UserPass;
 
         DAL.CompanyInfoManage dal = new DAL.CompanyInfoManage();
 
@@ -54,7 +55,11 @@ namespace BL
             CompanyTempt2 = dal.GetCompanyTag2();
             CompanyTempt3 = dal.GetCompanyTag3();
           //  return TempObject;
-
+           // UserPass = dal.GetCompanyNo();
+        }
+        public string GetCompanyPass(string useremail) {
+           string pass= dal.GetCompanyPass(useremail);
+            return pass;
         }
         public CompanyInfoManageBL(string companyname, string verifyfile, string contract)
         {
@@ -214,6 +219,13 @@ namespace BL
         {
             CompanyTempt3 = companytempt1;
         }
-
+        public void SetUserPass(string companytempt1)
+        {
+            UserPass = companytempt1;
+        }
+        public string GetUserPass(string companytempt1)
+        {
+            return UserPass;
+        }
     }
 }
