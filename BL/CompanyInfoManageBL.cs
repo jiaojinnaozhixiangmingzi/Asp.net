@@ -26,13 +26,17 @@ namespace BL
         string CompanyTempt2;
         string CompanyTempt3;
         string CiPayment;
-        string UserPass;
+        int CompanyVarifyState;
 
         DAL.CompanyInfoManage dal = new DAL.CompanyInfoManage();
 
         public CompanyInfoManageBL(string email)
         {
             this.CompanyEmail = email;
+        }
+        public CompanyInfoManageBL(int userid)
+        {
+            this.CompanyId = userid;
         }
         public CompanyInfoManageBL()
         {
@@ -54,12 +58,9 @@ namespace BL
             CompanyTempt1 = dal.GetCompanyTag1();
             CompanyTempt2 = dal.GetCompanyTag2();
             CompanyTempt3 = dal.GetCompanyTag3();
+            CompanyVarifyState = dal.GetCompanyVarifyState();
           //  return TempObject;
-           // UserPass = dal.GetCompanyNo();
-        }
-        public string GetCompanyPass(string useremail) {
-           string pass= dal.GetCompanyPass(useremail);
-            return pass;
+
         }
         public CompanyInfoManageBL(string companyname, string verifyfile, string contract)
         {
@@ -87,6 +88,10 @@ namespace BL
            
             dal.VerifyComInfo(UserId,CompanyName, CompanyVerifyFile, CompanyContract);
 
+        }
+        public void SaveVarifyState(int userid, int state)
+        {
+            dal.SaveVarifyState(userid, state);
         }
         public void AddTempt(int userid,string tempt)
         {
@@ -219,13 +224,6 @@ namespace BL
         {
             CompanyTempt3 = companytempt1;
         }
-        public void SetUserPass(string companytempt1)
-        {
-            UserPass = companytempt1;
-        }
-        public string GetUserPass(string companytempt1)
-        {
-            return UserPass;
-        }
+
     }
 }
