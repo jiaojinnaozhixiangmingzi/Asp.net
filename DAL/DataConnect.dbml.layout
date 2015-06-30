@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DataConnect">
+  <DataContextMoniker Name="/DataConnectDataContext" />
+  <nestedChildShapes>
+    <classShape Id="1cc7dad3-2bfa-49a5-b8ea-af146dd0c15f" absoluteBounds="4.875, 0.5, 2, 2.1446048990885416">
+      <DataClassMoniker Name="/DataConnectDataContext/userinfo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="48acf9db-af79-4a38-a515-77297a3fb0df" absoluteBounds="4.89, 0.96, 1.9700000000000002, 1.5846048990885415" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2fe48c15-8d6a-4a4e-bc46-353e7f5556e5" absoluteBounds="0.5, 1.125, 2, 2.3356245930989585">
+      <DataClassMoniker Name="/DataConnectDataContext/challenge" />
+      <nestedChildShapes>
+        <elementListCompartment Id="eb561270-5657-4d37-9f72-0feeb37d1969" absoluteBounds="0.51500000000000012, 1.585, 1.9700000000000002, 1.7756245930989585" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c9a86312-f125-4821-a04c-076a6cafb6bd" absoluteBounds="4, 2.25, 2, 1.9535852050781251">
+      <DataClassMoniker Name="/DataConnectDataContext/personinfo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="67b161cc-9d8f-49b4-a04e-92b98727aae2" absoluteBounds="4.0150000000000006, 2.71, 1.9700000000000002, 1.393585205078125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="305fc683-3801-402c-9b1b-66bd26348cfd" absoluteBounds="4.75, 1.875, 2, 3.6727624511718746">
+      <DataClassMoniker Name="/DataConnectDataContext/publishchallenge" />
+      <nestedChildShapes>
+        <elementListCompartment Id="79d936e8-c6c9-4784-9283-0ed492f33c33" absoluteBounds="4.7650000000000006, 2.335, 1.9700000000000002, 3.112762451171875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3909798c-3c74-442a-a9f4-52915e798f59" absoluteBounds="0.875, 0.875, 2, 1.9535852050781251">
+      <DataClassMoniker Name="/DataConnectDataContext/viewchallenge1" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dbafb881-0f32-483f-b76e-eafb9e051a17" absoluteBounds="0.88999999999999968, 1.335, 1.9700000000000002, 1.393585205078125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ddf5eb57-bb3f-4384-ace2-6d4fdd1cb947" absoluteBounds="1.625, 0.75, 2, 3.8637821451822916">
+      <DataClassMoniker Name="/DataConnectDataContext/ViewChallengeState" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7c09a179-27ce-456b-b1f8-4322b7d205ee" absoluteBounds="1.6400000000000006, 1.21, 1.9700000000000002, 3.3037821451822915" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c8142db3-02f7-45e7-a901-a728f635518c" absoluteBounds="2.375, 0.75, 2, 1.9535852050781251">
+      <DataClassMoniker Name="/DataConnectDataContext/viewcompany" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cc062a2b-3af0-4b1f-8e2d-d8445d32a0e5" absoluteBounds="2.3899999999999997, 1.21, 1.9700000000000002, 1.393585205078125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6ab7d892-d74e-4472-8b84-c408456b230e" absoluteBounds="1.875, 1.125, 2, 2.3356245930989585">
+      <DataClassMoniker Name="/DataConnectDataContext/viewusers" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d175ee0b-045c-47b3-953c-8e466f844770" absoluteBounds="1.8900000000000006, 1.585, 1.9700000000000002, 1.7756245930989585" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="50a19e41-8584-4a53-aa2c-4daabb536df2" absoluteBounds="2.375, 0.75, 2, 5.0099003092447907">
+      <DataClassMoniker Name="/DataConnectDataContext/viewchallenge" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cad48bf1-94f2-4fb9-a2af-828e09cd4bd4" absoluteBounds="2.3899999999999997, 1.21, 1.9700000000000002, 4.4499003092447911" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e79bc4b0-0445-479d-920e-d94ca5ca0588" absoluteBounds="1.75, 0.75, 2, 3.8637821451822916">
+      <DataClassMoniker Name="/DataConnectDataContext/companyinfo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d5ccc206-285b-406f-892f-0a213ef3de8a" absoluteBounds="1.7650000000000006, 1.21, 1.9700000000000002, 3.3037821451822915" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4f27300b-bd71-4f21-9a81-b06d6d370159" absoluteBounds="4.5, 1.5, 2, 2.3356245930989585">
+      <DataClassMoniker Name="/DataConnectDataContext/recievechallenge" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cb42e564-254e-4ab1-8301-9442fdff6c82" absoluteBounds="4.515, 1.96, 1.9700000000000002, 1.7756245930989585" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8a88ca9e-1064-4e90-afb8-db6c69075700" absoluteBounds="0.75, 0.625, 2, 2.7176639811197916">
+      <DataClassMoniker Name="/DataConnectDataContext/viewrecievechallenge" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1118c989-f450-4793-a13b-90f49d991210" absoluteBounds="0.765, 1.085, 1.9700000000000002, 2.1576639811197915" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
