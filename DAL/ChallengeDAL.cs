@@ -35,6 +35,21 @@ namespace DAL
             return ch;
         }
 
+        public List<ViewChallengeState> GetHistoryChallenge(int CompanyId)
+        {
+            DataConnectDataContext ddc = new DataConnectDataContext();
+
+            viewchallenge vc = new viewchallenge();
+            List<ViewChallengeState> ch = new List<ViewChallengeState>();
+
+            var result = from v in ddc.ViewChallengeState
+                         where v.userid == CompanyId & v.challengestate == 0
+                         select v;
+
+            ch = result.ToList<ViewChallengeState>();
+            return ch;
+        }
+
         public List<viewchallenge> GetChallengeDetail(int CompanyId, int PublishId)
         {
             DataConnectDataContext ddc = new DataConnectDataContext();
@@ -69,7 +84,8 @@ namespace DAL
 
         public void PublicNewChallenge(publishchallenge pc)
         {
-            pc.startdate = DateTime.Now.ToString();
+
+            pc.startdate = DateTime.Now.ToString("yyyy/MM/dd");
             DataConnectDataContext ddc = new DataConnectDataContext();
             ddc.publishchallenge.InsertOnSubmit(pc);
             ddc.SubmitChanges();
@@ -104,6 +120,117 @@ namespace DAL
                 //执行更新操作
                 ddc.SubmitChanges();
             }
+        }
+
+        public int GetUnfinishNumber(int publishid)
+        {
+            DataConnectDataContext ddc = new DataConnectDataContext();
+            var rusult = from t in ddc.recievechallenge
+                         where t.publishid == publishid && t.recievestatus == 0
+                         select t;
+            int i = 0;
+            foreach (recievechallenge c in rusult)
+            {
+                i++;
+            }
+            return i;
+        }
+
+        public int GetPromoteNumber(int publishid)
+        {
+            DataConnectDataContext ddc = new DataConnectDataContext();
+            var rusult = from t in ddc.recievechallenge
+                         where t.publishid == publishid && t.recievestatus == 1 && t.grade > 85
+                         select t;
+            int i = 0;
+            foreach (recievechallenge c in rusult)
+            {
+                i++;
+            }
+            return i;
+        }
+
+        public int GetPassNumber(int publishid)
+        {
+            DataConnectDataContext ddc = new DataConnectDataContext();
+            var rusult = from t in ddc.recievechallenge
+                         where t.publishid == publishid && t.recievestatus == 1 && t.grade > 60
+                         select t;
+            int i = 0;
+            foreach (recievechallenge c in rusult)
+            {
+                i++;
+            }
+            return i;
+        }
+
+        public int GetUnpassNumber(int publishid)
+        {
+            DataConnectDataContext ddc = new DataConnectDataContext();
+            var rusult = from t in ddc.recievechallenge
+                         where t.publishid == publishid && t.recievestatus == 1 && t.grade < 60
+                         select t;
+            int i = 0;
+            foreach (recievechallenge c in rusult)
+            {
+                i++;
+            }
+            return i;
+        }
+
+        public List<viewrecievechallenge> GetAllRecieveChallenge(int publishid)
+        {
+            DataConnectDataContext ddc = new DataConnectDataContext();
+            var rusult = from t in ddc.viewrecievechallenge
+                         where t.publishid == publishid
+                         select t;
+            List<viewrecievechallenge> rcge = new List<viewrecievechallenge>();
+            rcge = rusult.ToList<viewrecievechallenge>();
+            return rcge;
+        }
+
+        public List<viewrecievechallenge> GetAllUnfinishChallenge(int publishid)
+        {
+            DataConnectDataContext ddc = new DataConnectDataContext();
+            var rusult = from t in ddc.viewrecievechallenge
+                         where t.publishid == publishid && t.recievestatus == 0
+                         select t;
+            List<viewrecievechallenge> rcge = new List<viewrecievechallenge>();
+            rcge = rusult.ToList<viewrecievechallenge>();
+            return rcge;
+        }
+
+        public List<viewrecievechallenge> GetPromoteChallenge(int publishid)
+        {
+            DataConnectDataContext ddc = new DataConnectDataContext();
+            var rusult = from t in ddc.viewrecievechallenge
+                         where t.publishid == publishid && t.recievestatus == 1 && t.grade > 85
+                         select t;
+            List<viewrecievechallenge> rcge = new List<viewrecievechallenge>();
+            rcge = rusult.ToList<viewrecievechallenge>();
+            return rcge;
+        }
+
+        public List<viewrecievechallenge> GetPassChallenge(int publishid)
+        {
+            DataConnectDataContext ddc = new DataConnectDataContext();
+            var rusult = from t in ddc.viewrecievechallenge
+                         where t.publishid == publishid && t.recievestatus == 1 && t.grade > 60
+                         select t;
+            List<viewrecievechallenge> rcge = new List<viewrecievechallenge>();
+            rcge = rusult.ToList<viewrecievechallenge>();
+            return rcge;
+        }
+
+        public List<viewrecievechallenge> GetUnpassChallenge(int publishid)
+        {
+            DataConnectDataContext ddc = new DataConnectDataContext();
+            var rusult = from t in ddc.viewrecievechallenge
+                         where t.publishid == publishid && t.recievestatus == 1 && t.grade < 60
+                         select t;
+            List<viewrecievechallenge> rcge = new List<viewrecievechallenge>();
+            rcge = rusult.ToList<viewrecievechallenge>();
+            return rcge;
         }
     }
 }

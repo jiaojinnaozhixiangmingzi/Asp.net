@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace VIEW
 {
-    public partial class CompanyChallengeSelect : System.Web.UI.Page
+    public partial class ChallengePromote : System.Web.UI.Page
     {
         static public String degree = "";
         static public String challengetype = "";
@@ -18,8 +18,8 @@ namespace VIEW
         static public int promotenumber = 0;
         static public int passnumber = 0;
         static public int unpassnumber = 0;
-        static public int publishId = 0;
-        static public String chan_1 = "", chan_2 = "", chan_3 = "";  
+        static protected int publishId = 0;
+        static public String chan_1 = "", chan_2 = "", chan_3 = "";
         //static public String[] status = {"未开始","通过","未通过"};
         //static public String[] IfNew = {"新接受挑战" };
         protected void Page_Load(object sender, EventArgs e)
@@ -31,7 +31,6 @@ namespace VIEW
                 {
                     Response.Redirect("~/UserLogin.aspx?");//进入企业首页
                 }
-                var UserId = Request["userid"];
                 var PublishId = Request["publishid"];
                 BL.CompanyChallengeBL cc = new BL.CompanyChallengeBL();
                 publishId = int.Parse(PublishId);
@@ -63,7 +62,7 @@ namespace VIEW
         protected void BindAllRecieve()
         {
             BL.CompanyChallengeBL ccbl = new BL.CompanyChallengeBL();
-            Repeater1.DataSource = ccbl.GetAllRecieveChallenge(publishId);
+            Repeater1.DataSource = ccbl.GetPromoteChallenge(publishId);
             Repeater1.DataBind();
         }
     }

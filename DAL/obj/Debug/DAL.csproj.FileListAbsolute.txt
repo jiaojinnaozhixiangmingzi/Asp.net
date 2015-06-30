@@ -10,9 +10,15 @@ C:\Users\王阿星\Desktop\my_vs_2012doc\Solution1\DAL\bin\Debug\DAL.pdb
 C:\Users\王阿星\Desktop\my_vs_2012doc\Solution1\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 C:\Users\王阿星\Desktop\my_vs_2012doc\Solution1\DAL\obj\Debug\DAL.dll
 C:\Users\王阿星\Desktop\my_vs_2012doc\Solution1\DAL\obj\Debug\DAL.pdb
-C:\Users\王阿星\Desktop\新建文件夹\Asp.net\DAL\bin\Debug\DAL.dll.config
-C:\Users\王阿星\Desktop\新建文件夹\Asp.net\DAL\bin\Debug\DAL.dll
-C:\Users\王阿星\Desktop\新建文件夹\Asp.net\DAL\bin\Debug\DAL.pdb
-C:\Users\王阿星\Desktop\新建文件夹\Asp.net\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
-C:\Users\王阿星\Desktop\新建文件夹\Asp.net\DAL\obj\Debug\DAL.dll
-C:\Users\王阿星\Desktop\新建文件夹\Asp.net\DAL\obj\Debug\DAL.pdb
+D:\Documents\Visual Studio 2012\Projects\asp\Asp.net\DAL\bin\Debug\DAL.dll.config
+D:\Documents\Visual Studio 2012\Projects\asp\Asp.net\DAL\bin\Debug\DAL.dll
+D:\Documents\Visual Studio 2012\Projects\asp\Asp.net\DAL\bin\Debug\DAL.pdb
+D:\Documents\Visual Studio 2012\Projects\asp\Asp.net\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+D:\Documents\Visual Studio 2012\Projects\asp\Asp.net\DAL\obj\Debug\DAL.dll
+D:\Documents\Visual Studio 2012\Projects\asp\Asp.net\DAL\obj\Debug\DAL.pdb
+D:\Documents\Visual Studio 2012\Projects\Test\DAL\bin\Debug\DAL.dll.config
+D:\Documents\Visual Studio 2012\Projects\Test\DAL\bin\Debug\DAL.dll
+D:\Documents\Visual Studio 2012\Projects\Test\DAL\bin\Debug\DAL.pdb
+D:\Documents\Visual Studio 2012\Projects\Test\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+D:\Documents\Visual Studio 2012\Projects\Test\DAL\obj\Debug\DAL.dll
+D:\Documents\Visual Studio 2012\Projects\Test\DAL\obj\Debug\DAL.pdb

@@ -12,14 +12,10 @@ namespace VIEW
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
-
             if (!IsPostBack)
             {
                 //第一次打开页面执行的代码。
                 SetBind();
-
-
             }
             label_title_name.Text = (string)Session["useremail"];
         }

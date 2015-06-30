@@ -42,7 +42,6 @@ namespace DAL
                 CompanyTag1 = t.tag1;
                 CompanyTag2 = t.tag2;
                 CompanyTag3 = t.tag3;
-                
                 if (CompanyVarifyState != null)
                 {
                     CompanyVarifyState = (int)t.verifystate;
@@ -59,7 +58,7 @@ namespace DAL
             com.companyname = companyname;
             com.varifyfile = verifyfile;
             com.director = companycontract;
-            com.verifystate = 0;
+
 
             ddc.companyinfo.InsertOnSubmit(com);
             ddc.SubmitChanges();
@@ -134,7 +133,6 @@ namespace DAL
                 t.city = CompanyCity;
                 t.scale = CompanyScale;
                 t.describe = CompanyDescribe;
-
             }
 
             ddc.SubmitChanges();

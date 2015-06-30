@@ -105,16 +105,14 @@
 				<section  id="Section1"  class="col-md-12">
 					<div  class="btn-group">
 						
-							<a  class="btn btn-default dropdown-toggle btn-demo-space top-search"  data-toggle="dropdown"  href="http://www.oxcoder.com/user-recruit-list.htm#"> 全部 <span  class="caret"></span></a>
-						
-						
-						
-						
+                        
+						<a  class="btn btn-default dropdown-toggle btn-demo-space top-search"  data-toggle="dropdown"  href="http://www.oxcoder.com/user-recruit-list.htm#"> 全部 <span  class="caret"></span></a>
+						    
 						<ul  class="dropdown-menu">
-							<li><a  href="">全部</a></li>
-							<li><a  href="">未完成的挑战</a></li>
-							<li><a  href="">通过的挑战</a></li>
-							<li><a  href="">不通过的挑战</a></li>
+							<li><a  href="UserChallenge.aspx">全部</a></li>
+							<li><a  href="NotFinish.aspx">未完成的挑战</a></li>
+							<li><a  href="Pass.aspx">通过的挑战</a></li>
+							<li><a  href="NotPass.aspx">不通过的挑战</a></li>
 						</ul>
 					</div>
 					
@@ -178,7 +176,7 @@
 									</div>
 									<div  class="panel-footer align-center">
                                         <asp:Button  id="idbutton" runat="server" Text='<%# Eval("publishid")%>' class="btn btn-new1"  visible="false"></asp:Button>
-											<asp:button runat="server" class="btn btn-new1" OnClick="BeginChallenge" Text="开始挑战"></asp:button>
+											<asp:button runat="server" class="btn btn-new1" CommandName="start" Text="开始挑战"></asp:button>
 											<asp:button   runat="server" id="giveup"  CommandName="giveup" class="btn btn-new2" Text="放弃" ></asp:button>
 									</div>
 								</div>
@@ -193,22 +191,7 @@
 				
 			</form>	
 			</div>
-        <div  class="col-md-12">
-					<section  id="Section3">
-						<ul  class="pagination">
-							
-								<li  class="disabled"><a  href="javascript:;">«</a></li>
-							
-							
-							 <li  class="active"><a>1</a></li>
-
-							
-								<li  class="disabled"><a  href="javascript:;">»</a></li>
-							
-							
-						</ul>
-					</section>
-				</div>
+        
 			
 
 

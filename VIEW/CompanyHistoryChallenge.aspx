@@ -1,8 +1,8 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CompanyIndex.aspx.cs" Inherits="VIEW.CompanyIndex" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CompanyHistoryChallenge.aspx.cs" Inherits="VIEW.CompanyHistoryChallenge" %>
 
 <!DOCTYPE html>
-<!-- saved from url=(0042)http://www.oxcoder.com/hr-recruit-list.htm -->
-<html lang="en">
+
+<<html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
@@ -97,20 +97,20 @@
                                         <section>
                                             <section id="middle">
                                                 <h2 class="h2-tab">
-                                                    <a href=" ">进行中的挑战</a>
+                                                    <a href="CompanyIndex.aspx" class="off">进行中的挑战</a>
                                                 </h2>
                                                 <h2 class="h2-tab">
-                                                    <a href="CompanyHistoryChallenge.aspx" class="off">挑战历史</a>
+
+                                                    <a href="" class="">挑战历史</a>
                                                 </h2>
                                                 <!--吴垠快整-->
-                                                <asp:Button ID="Button1" class="btn btn-new1 pull-right" Style="margin-top: 20px;" runat="server" Text="新增挑战邀请" OnClick="Button_Click1" />
+                                                
                                             </section>
 
                                             <div id="Div1">
                                                 <div class="row">
-
-
-                                                    <asp:Repeater ID="Repeater1" runat="server" OnItemCommand="rpt_Message_ItemCommand">
+                                                    
+                                                    <asp:Repeater ID="Repeater1" runat="server" OnItemCommand="rpt_ItemCommand">
                                                         <ItemTemplate>
                                                             <div class="col-md-12">
                                                                 <div class="panel panel-default project ">
@@ -130,8 +130,8 @@
                                                                             </div>
                                                                             <div class="col-md-2">
                                                                                 <ul class="list-unstyled" style="margin: 7px 0;">
-                                                                                    <li><span class="badge badge-info"><%# Eval("recievenumber")%></span>个接受</li>
-                                                                                    <li><span class="badge badge-danger"><%# Eval("finishnumber")%></span>个完成</li>
+                                                                                    <li><span class="badge badge-info"><%# Eval("recievenumber")%></span>个新接受</li>
+                                                                                    <li><span class="badge badge-danger"><%# Eval("finishnumber")%></span>个新完成</li>
                                                                                 </ul>
                                                                             </div>
                                                                             <div class="col-md-2">
@@ -140,10 +140,8 @@
                                                                                 </ul>
                                                                             </div>
                                                                             <div class="col-md-3">
-                                                                                <asp:LinkButton ID="button1" CommandName="PickUp" runat="server" class="btn btn-new1">去筛选</asp:LinkButton>
-                                                                                <asp:LinkButton ID="button2" CommandName="SendInvite" runat="server" class="btn btn-new1" style="margin: 16px 5px;">邀请</asp:LinkButton>
+                                                                                <asp:LinkButton ID="button1" runat="server" class="btn btn-new1">查看历史</asp:LinkButton>
                                                                                 <asp:Button ID="idbutton" runat="server" Text='<%# Eval("publishid")%>' class="btn btn-new1" Visible="false"></asp:Button>
-                                                                                
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -312,5 +310,5 @@
 
 
 
-</body>
+    </body>
 </html>
