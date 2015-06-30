@@ -25,6 +25,7 @@ namespace VIEW
             //spanname.InnerText = CompanyName;
             SetBind();
         }
+
         private void SetBind()
         {
             BL.CompanyChallengeBL cc = new BL.CompanyChallengeBL();
@@ -32,8 +33,8 @@ namespace VIEW
             BL.CompanyInfoManageBL ul = new BL.CompanyInfoManageBL(useremail);
             int userid = ul.GetCompanyNo();
 
-            rpt_Message.DataSource = cc.GetGoingChallenge(userid);
-            rpt_Message.DataBind();
+            Repeater1.DataSource = cc.GetGoingChallenge(userid);
+            Repeater1.DataBind();
         }
 
         protected void Button_Click1(object sender, EventArgs e)
@@ -45,12 +46,23 @@ namespace VIEW
         protected void rpt_Message_ItemCommand(object source, RepeaterCommandEventArgs e)
         {
             String str = ((Button)e.Item.FindControl("idbutton")).Text;
-
             string useremail = (string)Session["useremail"];
             int publishid = int.Parse(str);
-            Response.Redirect("~/CompanyChallengeDetail.aspx?userid=" + useremail + "&publishid=" + publishid);
-
+            if (e.CommandName == "PickUp")
+            {
+                
+                Response.Redirect("~/CompanyChallengeDetail.aspx?userid=" + useremail + "&publishid=" + publishid);
+            }
+            else if (e.CommandName == "SendInvite")
+            {
+                BL.CompanyChallengeBL ccbl = new BL.CompanyChallengeBL();
+                DAL.ViewChallengeState pc = ccbl.GetChallengeById(publishid);
+                String url = "~/ChallengeInvite.aspx?level=" + pc.degree + "&type=" + pc.type;
+                Response.Redirect(url);
+            }
         }
+
+        
        
     }
 }

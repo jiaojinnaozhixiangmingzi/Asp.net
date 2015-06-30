@@ -50,15 +50,29 @@ namespace VIEW
                 Response.Redirect("~/UserChallenge.aspx?");//进入用户挑战页面
 
             }
+
+            if (e.CommandName == "start")
+            {
+                String str = ((Button)e.Item.FindControl("idbutton")).Text;
+                //System.Diagnostics.Debug.Write(str);
+                int publishid = int.Parse(str);//获取挑战ID
+                string str1 = Session["username"].ToString();//从session中获取userid
+                int userid = int.Parse(str1);
+
+                BL.RecieveChallenge rc = new BL.RecieveChallenge();
+                rc.startChallenge(userid, publishid);
+                Response.Redirect("~/HistoryChallenge.aspx");//进入挑战历史页面
+            }
+
         }
 
 
-        protected void BeginChallenge(object sender, EventArgs e)
-        {
-            
-                Response.Redirect("~/ChallengeOnline1.aspx");//进入企业首页
+        //protected void BeginChallenge(object sender, EventArgs e)
+        //{
+        //        
+        //        Response.Redirect("~/HistoryChallenge.aspx");//进入挑战历史页面
            
-        }
+        //}
 
     }
 }

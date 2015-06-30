@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CompanyChallengeDetail.aspx.cs" Inherits="VIEW.CompanyChallengeSelect" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ChallengePass.aspx.cs" Inherits="VIEW.ChallengePass" %>
 
 <!DOCTYPE html>
 
@@ -56,7 +56,7 @@
 		</div>
 		<div  class="navbar-collapse collapse"  role="navigation">
 			<ul  class="nav navbar-nav">
-				<li  class="active"><a  href="CompanyIndex.aspx?">挑战管理</a></li>
+				<li  class="active"><a  href="CompanyIndex.aspx">挑战管理</a></li>
 				<li><a  href="CompanyFindTalent.aspx?">人才推荐</a></li>
 			</ul>
 			<ul  class="nav navbar-nav navbar-right">
@@ -116,11 +116,11 @@
 				<div  class="col-md-12">
 					<section  id="middle">
 						<h2  class="h2-tab">
-							<a  href="">全部（<%=recievenumber%>）
+							<a  href="CompanyChallengeDetail.aspx?publishid=<%=publishId%>"class="off">全部（<%=recievenumber%>）
 							</a>
 						</h2>
 						<h2  class="h2-tab">
-							<a  href="ChallengeShowUnfinishi.aspx?publishid=<%=publishId%>"）  class="off">未完成（<%=unfinishnumber%>）
+							<a  href="ChallengeShowUnfinishi.aspx?publishid=<%=publishId%>"class="off">未完成（<%=unfinishnumber%>）
 							</a>
 						</h2>
 						<h2  class="h2-tab">
@@ -128,11 +128,11 @@
 							</a>
 						</h2>
 						<h2  class="h2-tab">
-							<a  href="ChallengePass.aspx?publishid=<%=publishId%>"  class="off">合格（<%=passnumber%>）
+							<a  href=""  >合格（<%=passnumber%>）
 							</a>
 						</h2>
 						<h2  class="h2-tab">
-							<a  href="ChallengeUnpass.aspx?publishid=<%=publishId%>"  class="off">不合格（<%=unpassnumber%>）
+							<a  href="ChallengeUnpass.aspx?publishid=<%=publishId%>" class="off" >不合格（<%=unpassnumber%>）
 							</a>
 						</h2>
 					</section>

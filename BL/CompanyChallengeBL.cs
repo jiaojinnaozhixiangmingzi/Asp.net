@@ -10,9 +10,7 @@ namespace BL
 {
     public class CompanyChallengeBL
     {
-        int ChallengeLevel = 0;
-        int PublicType = -1;
-        int CameraType = -1;
+        
         String[] ChallengeType = {"None","Java","Android","iOS","C","C++","PHP","Python" };
         DAL.ChallengeDAL challenge = new DAL.ChallengeDAL();
         DAL.CompanyDAL cdl = new DAL.CompanyDAL();
@@ -26,6 +24,12 @@ namespace BL
         {
             List<ViewChallengeState> GoingChallengeList = challenge.GetGoingChallenge(CompanyId);
             return GoingChallengeList;
+        }
+
+        public List<ViewChallengeState> GetHistoryChallenge(int CompanyId)
+        {
+            List<ViewChallengeState> HistoryChallengeList = challenge.GetHistoryChallenge(CompanyId);
+            return HistoryChallengeList;
         }
 
         public List<viewchallenge> GetChallengeDetail(int CompanyId, int PublishId)
@@ -60,6 +64,56 @@ namespace BL
         public void CloseChallenge(int chanid)
         {
             challenge.CloseChallenge(chanid);
+        }
+
+        public int GetUnfinishNum(int Publishid)
+        {
+            return challenge.GetUnfinishNumber(Publishid);
+        }
+
+        public int GetPromoteNumber(int Publishid)
+        {
+            return challenge.GetPromoteNumber(Publishid);
+        }
+
+        public int GetPassNumber(int Publishid)
+        {
+            return challenge.GetPassNumber(Publishid);
+        }
+
+        public int GetUnpassNumber(int Publishid)
+        {
+            return challenge.GetUnpassNumber(Publishid);
+        }
+
+        public List<viewrecievechallenge> GetAllRecieveChallenge(int publishid)
+        {
+            List<viewrecievechallenge> rclist = challenge.GetAllRecieveChallenge(publishid);
+            return rclist;
+        }
+
+        public List<viewrecievechallenge> GetUnfinishChallenge(int publishid)
+        {
+            List<viewrecievechallenge> rclist = challenge.GetAllUnfinishChallenge(publishid);
+            return rclist;
+        }
+
+        public List<viewrecievechallenge> GetPromoteChallenge(int publishid)
+        {
+            List<viewrecievechallenge> rclist = challenge.GetPromoteChallenge(publishid);
+            return rclist;
+        }
+
+        public List<viewrecievechallenge> GetPassChallenge(int publishid)
+        {
+            List<viewrecievechallenge> rclist = challenge.GetPassChallenge(publishid);
+            return rclist;
+        }
+
+        public List<viewrecievechallenge> GetUnpassChallenge(int publishid)
+        {
+            List<viewrecievechallenge> rclist = challenge.GetUnpassChallenge(publishid);
+            return rclist;
         }
     }
 }

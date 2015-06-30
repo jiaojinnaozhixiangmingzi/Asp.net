@@ -102,8 +102,8 @@ namespace VIEW
                 Response.Write("<script>alert('请选择三个题目');</script>");
             else
             {
-                String[] ChallengeType = { "None", "Java", "Android", "iOS", "C", "C++", "PHP", "Python" };
-                String[] Salary = { "None", "2k-5k", "5k-8k", "8k-10k", "10k-12k", "12k-15k", "15k以上" };
+                String[] ChallengeType = { "None", "Java", "Android", "iOS", "C语言", "C++", "php", "python" };
+                String[] Salary = { "None", "2k~5k", "5k~8k", "8k~10k", "10k~12k", "12k~15k", "15k以上" };
 
                 DAL.publishchallenge pc = new DAL.publishchallenge();
                 BL.CompanyChallengeBL ccbl = new BL.CompanyChallengeBL();

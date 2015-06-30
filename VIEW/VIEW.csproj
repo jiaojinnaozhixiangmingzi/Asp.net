@@ -132,7 +132,11 @@
     <Content Include="ChallengeOnline1.aspx" />
     <Content Include="ChallengeOnline2.aspx" />
     <Content Include="ChallengeOnline3.aspx" />
+    <Content Include="ChallengePass.aspx" />
+    <Content Include="ChallengePromote.aspx" />
     <Content Include="ChallengeResult.aspx" />
+    <Content Include="ChallengeShowUnfinishi.aspx" />
+    <Content Include="ChallengeUnpass.aspx" />
     <Content Include="CompanyAddChallenge.aspx" />
     <Content Include="CompanyChallengeDetail.aspx" />
     <Content Include="CompanyChangeInfo.aspx" />
@@ -143,6 +147,7 @@
     <Content Include="CompanyEditInfo2.aspx" />
     <Content Include="CompanyFindTalent.aspx" />
     <Content Include="CompanyFinishFillInfo.aspx" />
+    <Content Include="CompanyHistoryChallenge.aspx" />
     <Content Include="CompanyIndex.aspx" />
     <Content Include="CompanyManagement.aspx" />
     <Content Include="CompanySelectChallengeProblem.aspx" />
@@ -349,12 +354,40 @@
     <Compile Include="ChallengeOnline3.aspx.designer.cs">
       <DependentUpon>ChallengeOnline3.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ChallengePass.aspx.cs">
+      <DependentUpon>ChallengePass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChallengePass.aspx.designer.cs">
+      <DependentUpon>ChallengePass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChallengePromote.aspx.cs">
+      <DependentUpon>ChallengePromote.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChallengePromote.aspx.designer.cs">
+      <DependentUpon>ChallengePromote.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ChallengeResult.aspx.cs">
       <DependentUpon>ChallengeResult.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ChallengeResult.aspx.designer.cs">
       <DependentUpon>ChallengeResult.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChallengeShowUnfinishi.aspx.cs">
+      <DependentUpon>ChallengeShowUnfinishi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChallengeShowUnfinishi.aspx.designer.cs">
+      <DependentUpon>ChallengeShowUnfinishi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChallengeUnpass.aspx.cs">
+      <DependentUpon>ChallengeUnpass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChallengeUnpass.aspx.designer.cs">
+      <DependentUpon>ChallengeUnpass.aspx</DependentUpon>
     </Compile>
     <Compile Include="CompanyAddChallenge.aspx.cs">
       <DependentUpon>CompanyAddChallenge.aspx</DependentUpon>
@@ -425,6 +458,13 @@
     </Compile>
     <Compile Include="CompanyFinishFillInfo.aspx.designer.cs">
       <DependentUpon>CompanyFinishFillInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CompanyHistoryChallenge.aspx.cs">
+      <DependentUpon>CompanyHistoryChallenge.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CompanyHistoryChallenge.aspx.designer.cs">
+      <DependentUpon>CompanyHistoryChallenge.aspx</DependentUpon>
     </Compile>
     <Compile Include="CompanyIndex.aspx.cs">
       <DependentUpon>CompanyIndex.aspx</DependentUpon>
@@ -644,7 +684,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>14624</DevelopmentServerPort>
+          <DevelopmentServerPort>35107</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:1032/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
